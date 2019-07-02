@@ -44,6 +44,13 @@ public class RNBuglyModule extends ReactContextBaseJavaModule {
     CrashReport.postCatchedException(new MyBuglyException(str));
   }
 
+  // Note: debug 版本的异常崩溃会被 RN 拦截、不会上报
+  @ReactMethod
+  public void testJavaCrash() {
+    Log.i("ReactNative-bugly", "testJavaCrash()");
+    CrashReport.testJavaCrash();
+  }
+
   /**
    * 初始化
    */
