@@ -37,6 +37,12 @@ public class RNBuglyModule extends ReactContextBaseJavaModule {
     Beta.checkUpgrade(isManual, isSilence);
   }
 
+  // 设置自定义参数
+  @ReactMethod
+  public void putUserData(String userKey, String userValue) {
+    CrashReport.putUserData(getReactApplicationContext(), userKey, userValue);
+  }
+
   // 主动上报开发者 catch 的异常
   @ReactMethod
   public void postCatchedException(String str) {
