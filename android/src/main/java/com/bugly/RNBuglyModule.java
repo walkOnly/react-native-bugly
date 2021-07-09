@@ -37,9 +37,10 @@ public class RNBuglyModule extends ReactContextBaseJavaModule {
     Beta.checkUpgrade(isManual, isSilence);
   }
 
-  // 设置自定义参数
+  // 设置自定义数据
   @ReactMethod
   public void putUserData(String userKey, String userValue) {
+    Log.i("ReactNative-bugly", "putUserData(): " + userKey + " " + userValue);
     CrashReport.putUserData(getReactApplicationContext(), userKey, userValue);
   }
 
