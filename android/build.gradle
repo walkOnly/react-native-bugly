@@ -25,9 +25,9 @@ repositories {
 }
 
 dependencies {
-    compile 'com.facebook.react:react-native:+'
+    implementation 'com.facebook.react:react-native:+'
 
     //compile 'com.tencent.bugly:crashreport:latest.release'
-    compile 'com.tencent.bugly:crashreport_upgrade:latest.release'
-    compile 'com.tencent.bugly:nativecrashreport:latest.release'
+    api 'com.tencent.bugly:crashreport_upgrade:latest.release'
+    api 'com.tencent.bugly:nativecrashreport:latest.release'
 }
